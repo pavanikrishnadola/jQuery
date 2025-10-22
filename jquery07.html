@@ -1,0 +1,31 @@
+<!--Jquery Effects-->
+<!--Display Effects-->
+<!--Both Hide & Show Effects-->
+<!doctype html>
+<html>
+    <head>
+        <title>demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+                $("p").show();
+            })
+        })
+    </script>
+    </head>
+    <body>
+        <p>This paragraph will show and hide when you click buttons.</p>
+        <br><br>
+        <button id="hide">HIDE</button>
+        <button id="show">SHOW</button>
+    </body>
+</html>
