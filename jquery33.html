@@ -1,0 +1,31 @@
+<!--Jquery Events-->
+<!--change()-->
+<!doctype html>
+<html>
+    <head>
+        <title>demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            div{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <select id="se" name="actors">
+            <option>Uthappa</option>
+            <option selected="selected">Kattapa</option>
+            <option>Bahubali</option>
+            <option>Bhallala Deva</option>
+            <option>Awanthika</option>
+        </select>
+        <div id="loc"></div>
+        <script>
+            $("select").change(function(){
+                document.getElementById("loc").innerHTML="You selected:"+document.getElementById("se").value;
+            })
+        </script>
+    </body>
+</html>

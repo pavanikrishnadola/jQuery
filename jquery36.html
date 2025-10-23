@@ -1,0 +1,21 @@
+<!--Jquery Events-->
+<!--mouseleave()-->
+<!doctype html>
+<html>
+    <head>
+        <title>demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("p").mouseleave(function(){
+                    $("p").css("background-color","green");
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <p>Move your mouse cursor over this statement</p>
+    </body>
+</html>
