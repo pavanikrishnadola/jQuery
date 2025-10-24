@@ -1,0 +1,38 @@
+<!--simple and compund interest-->
+<!doctype html>
+<html>
+    <head>
+        <title>demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initila-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form>
+            principal  <input type="text" id="v1"><br><br>
+            time       <input type="text" id="v2"><br><br>
+            Rate of interest   <input type="text" id="v3"><br><br>
+            payable            <input type="text" id="v4"><br><br>
+            <input type="button" value="simple interest" id="calculateSI"><br><br>
+            <input type="button" value="compund interest" id="calculateCI"><br><br>
+        </form>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#calculateSI").click(function(){
+                    var p=parseInt($("#v1").val())
+                    var t=parseInt($("#v2").val())
+                    var r=parseInt($("#v3").val())
+                    var si=p*t*r/100;
+                    $("#v4").val(si);
+                })
+                $("#calculateCI").click(function(){
+                    var p=parseInt($("#v1").val())
+                    var t=parseInt($("#v2").val())
+                    var r=parseInt($("#v3").val())
+                    var ci=p*Math.pow(1+r/100,t);
+                    $("#v4").val(ci);
+                })
+            })
+        </script>
+    </body>
+</html>
