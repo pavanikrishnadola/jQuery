@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initila-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            greet();
+        });
+        function greet() {
+            var name = prompt("Enter Your name", "");
+            var age = prompt("Enter Your age", "");
+            if (age < 18) {
+                window.location = "http://www.google.com";
+                alert("Not eligible to visit");
+            } else {
+                alert("Welcome to my site " + name);
+            }
+        }
+    </script>
+</body>
+</html>

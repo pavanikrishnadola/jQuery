@@ -1,0 +1,33 @@
+<!--Radio buttons-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffee Order</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initila-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>How would you like your coffee?</p>
+    <form id="coffeeForm">
+        <input type="radio" name="coffee" value="cream">With cream<br>
+        <input type="radio" name="coffee" value="sugar">With sugar<br>
+        <br>
+        <input type="button" id="sendOrder" value="Send order">
+        <br><br>
+        <input type="text" id="order" size="50">
+    </form>
+    <script>
+        $(document).ready(function () {
+            $("#sendOrder").click(function () {
+                var selectedCoffee = $("input[name='coffee']:checked").val();
+                if (selectedCoffee) {
+                    $("#order").val("You ordered a coffee with: " + selectedCoffee);
+                } else {
+                    $("#order").val("Please select a coffee option.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

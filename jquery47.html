@@ -1,0 +1,30 @@
+<!--Drop down list-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Value Display</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initila-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2>Select a value:</h2>
+    <select id="mySelect">
+        <option value="">Select an option</option>
+        <option value="PEN">PEN</option>
+        <option value="BOOK">BOOK</option>
+        <option value="ERASER">ERASER</option>
+    </select>
+    <script>
+        $(document).ready(function () {
+            $("#mySelect").change(function () {
+                // Get the selected value from the <select> element
+                var selectedValue = $(this).val();
+
+                $("#selectedValueParagraph").text("Selected value: " + selectedValue);
+            });
+        });
+    </script>
+    <p id="selectedValueParagraph">Selected value will be displayed here.</p>
+</body>
+</html>

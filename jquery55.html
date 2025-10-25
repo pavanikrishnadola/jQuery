@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initila-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <form name="fm1">
+        <label for="fage">Age:</label><input type="text" name="fage">
+        <input type="submit" value="submit" id="submitBtn">
+    </form>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#submitBtn").click(function () {
+                return allNumeric($("input[name='fage']")[0]);
+            });
+        });
+        function allNumeric(inputtxt) {
+            var numbers = /^[0-9]+$/;
+            if (inputtxt.value.match(numbers)) {
+                alert('Your Age has been accepted....');
+                $("input[name='fage']").focus();
+                return true;
+            } else {
+                alert('Please input numeric characters only');
+                $("input[name='fage']").focus();
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
